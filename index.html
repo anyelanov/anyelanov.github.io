@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para la mejor novia💖 </title>
+    <link rel="stylesheet" href="stylee.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenedor de contraseña -->
+    <div id="password-container">
+        <div class="password-box">
+            <div class="lock-icon">🔒</div>
+            <h2>Ingresa la clave del calendario</h2>
+            <input type="password" id="password-input" placeholder="Escribe aquí...">
+            <button onclick="checkPassword()">Abrir</button>
+        </div>
+    </div>
+
+    <!-- Contenido de la carta (oculto por defecto) -->
+    <div id="content">
+        <div class="letter">
+            <h1>Para Anyela 💖</h1>
+            <div class="message">
+                <p>
+                    Hola preciosa, se que hoy es un dia muy especial para ti y para mi, más para mi que para ti hay que admitirlo, hoy quiero recalcar y apreciar tu persona a ti que sin saberlo le diste un giro inesperado y lindo a mi vida.
+                    <br><br>
+                    Desde que llegaste, no solo cambiaste mis dias, tambien cambiaste la forma en la que veo muchas cosas, contigo, los momentos simples se sienten especiales, las risas duran mas, y los silencios, incluso esos se sienten comodos.
+                    <br><br>
+                    Y bueno tengo que admitir que las cosas no salen como esperamos, hemos tenido dias raros, malosentendidos, distancias que dolieron, y algunas palabras incorrectas, pero incluso con todo eso, si tuviera que elegir de nuevo te elegiria a ti, Siempre.
+                    <br><br>
+                    Gracias por estar, por estar en los buenos y malos momentos. Por quedarte cuando era más fácil irse. Por mirarme de la forma en la que lo haces.
+                    <br><br>
+                    Gracias por ser tú, por lo que eres conmigo, y por todo lo que compartimos. A veces me cuesta decirlo, pero… me hacés bien. Mucho más de lo que te imaginás.
+                    <br><br>
+                    Espero poder seguir compartiendo este momento de mi vida contigo, y que compartas este pedacito de tu vida contigo. 
+                </p>
+            </div>
+            <div class="signature">
+                <p>Del hombre que mas te ama,</p>
+                <p class="name">Damian Rivera</p>
+            </div>
+            <div class="click-button-container">
+    <a href="dos.html" class="custom-button">Da click aquí</a>
+</div>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password-input').value;
+            if (password === '020508') {
+                document.getElementById('password-container').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('password-container').style.display = 'none';
+                    document.getElementById('content').style.display = 'flex';
+                }, 500);
+            } else {
+                alert('❌ La clave está en las pistas... ¡Intenta de nuevo!');
+            }
+        }
+    </script>
+</body>
+</html>
